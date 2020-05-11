@@ -1,6 +1,6 @@
-# Yii _____
+# Yii willnorris/imageproxy
 
-The package ...
+The package contains helpers for https://github.com/willnorris/imageproxy
 
 ## Installation
 
