@@ -18,6 +18,10 @@ class Url
     public static function image($imageSource, $preset = null)
     {
         // sanitize input
+        $imageSource = ltrim($imageSource, '/');
+        if (empty($imageSource)) {
+            return null;
+        }
         $preset = trim($preset, "/");
         $baseUrl = static::getBaseUrl();
         $prefix = static::getPrefix();
