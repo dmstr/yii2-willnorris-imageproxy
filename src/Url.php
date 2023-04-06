@@ -15,7 +15,7 @@ class Url
      */
     protected static $_paramCache = [];
 
-    public static function image($imageSource, $preset = null)
+    public static function image($imageSource, $preset = '')
     {
         // sanitize input
         $imageSource = ltrim($imageSource, '/');
