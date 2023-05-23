@@ -18,7 +18,7 @@ class Url
     public static function image($imageSource, $preset = '')
     {
         // sanitize input
-        $imageSource = ltrim($imageSource, '/');
+        $imageSource = ltrim((string)$imageSource, '/');
         if (empty($imageSource)) {
             return null;
         }
