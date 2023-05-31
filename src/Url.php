@@ -63,7 +63,7 @@ class Url
     protected static function getBaseUrl()
     {
         if (!isset(static::$_paramCache['baseUrl'])) {
-            static::$_paramCache['baseUrl'] = trim(Yii::$app->settings->get('imgBaseUrl', 'app.frontend'), "/");
+            static::$_paramCache['baseUrl'] = trim((string) Yii::$app->settings->get('imgBaseUrl', 'app.frontend'), "/");
         }
         return static::$_paramCache['baseUrl'];
     }
@@ -76,7 +76,7 @@ class Url
     protected static function getPrefix()
     {
         if (!isset(static::$_paramCache['prefix'])) {
-            static::$_paramCache['prefix'] = trim(Yii::$app->settings->get('imgHostPrefix', 'app.frontend'), "/");
+            static::$_paramCache['prefix'] = trim((string) Yii::$app->settings->get('imgHostPrefix', 'app.frontend'), "/");
         }
         return static::$_paramCache['prefix'];
     }
