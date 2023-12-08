@@ -22,7 +22,7 @@ class Url
         if (empty($imageSource)) {
             return null;
         }
-        $preset = trim($preset, "/");
+        $preset = trim((string)$preset, "/");
         $baseUrl = static::getBaseUrl();
         $prefix = static::getPrefix();
         $imageSourceFull = $imageSource . static::getSuffix();
